@@ -14,7 +14,7 @@ function Header({ collapsed, setCollapsed }: IHeader): React.ReactElement {
 					<img src={Logo} alt="logo" className="h-[2em] md:h-[3em]" />
 					<CepatButton
 						type="text"
-						className=" hover:text-[#34B34A]!"
+						className="text-violet-50! hover:text-[#34B34A]!"
 						icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
 						onClick={() => setCollapsed(!collapsed)}
 						style={{

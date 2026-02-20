@@ -1,4 +1,4 @@
-import type { ITabsContentProps } from '.';
+import type { ITabsContentProps } from '..';
 
 export function TabsContent({ status, children }: ITabsContentProps): React.ReactElement {
 	return (

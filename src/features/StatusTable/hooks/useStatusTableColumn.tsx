@@ -5,6 +5,7 @@ import { useNavigate, useOutletContext } from 'react-router-dom';
 import { CheckCircleOutlined, DeleteOutlined, KeyOutlined } from '@ant-design/icons';
 import { statusIconMap } from '@/global/constants/StatusIconLayoutConst';
 import type { ITab } from '@/layout/components';
+import CepatButton from '@/global/components/CepatButton';
 
 function useStatusTableColumn(status: string) {
 	const { setTabs, setActiveTab } = useOutletContext<any>();
@@ -134,20 +135,30 @@ function useStatusTableColumn(status: string) {
 		{
 			title: 'Action',
 			key: 'action',
-			width: 100,
+			width: 140,
 			fixed: 'right',
 			render: () => {
 				return (
-					<Space size="middle" className="text-[#585899]">
-						<Tooltip placement="topLeft" title={'Aprroved'} color={'#585899'}>
-							<CheckCircleOutlined />
-						</Tooltip>
-						<Tooltip placement="topLeft" title={'Delete'} color={'#585899'}>
-							<DeleteOutlined />
-						</Tooltip>
-						<Tooltip placement="topLeft" title={'Generate PN Number'} color={'#585899'}>
-							<KeyOutlined />
-						</Tooltip>
+					<Space size="small">
+						<CepatButton
+							tooltip={'Aprroved'}
+							type="text"
+							icon={<CheckCircleOutlined />}
+							size="small"
+							className="hover:text-[#34B34A]!"
+						/>
+						<CepatButton
+							tooltip={'Delete'}
+							type="text"
+							icon={<DeleteOutlined />}
+							className="hover:text-[#34B34A]!"
+						/>
+						<CepatButton
+							tooltip={'Generate PN Number'}
+							icon={<KeyOutlined />}
+							type="text"
+							className="hover:text-[#34B34A]!"
+						/>
 					</Space>
 				);
 			},

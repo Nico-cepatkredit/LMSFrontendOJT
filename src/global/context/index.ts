@@ -1,4 +1,4 @@
-import type { ISectionVisibility, SectionRefs, SectionKey } from '../components';
+import type { ISectionVisibility, SectionRefs, SectionKey } from '..';
 
 export interface LoanTabContextValue {
 	visible: ISectionVisibility;

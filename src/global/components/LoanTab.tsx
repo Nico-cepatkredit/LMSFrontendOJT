@@ -1,10 +1,10 @@
 import { Flex } from 'antd';
-import type { ISectionVisibility, SectionKey, SectionRefs } from '.';
+import type { ISectionVisibility, SectionKey, SectionRefs } from '../index.ts';
 import { useRef, useState } from 'react';
 import { initialSectionVisibility } from '../constants/LoanTabNavConst';
-import LoanTabNav from './LoanTabNav';
+import LoanTabNav from '../../features/LoanTab/components/LoanTabNav.tsx';
 import { LoanTabContext } from '../context/LoanTabContext.tsx';
-import PNAction from './PNAction.tsx';
+import PNAction from '@/features/LoanTab/components/PNAction.tsx';
 
 function LoanTab({ children }: { children: React.ReactNode }) {
 	const [visible, setVisible] = useState<ISectionVisibility>(initialSectionVisibility);

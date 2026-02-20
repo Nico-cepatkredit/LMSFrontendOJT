@@ -28,5 +28,7 @@ export const useSharedStyles = () => {
 
 			// textAlign: 'center',
 		},
+		sharedButtonClasses:
+			'text-[#9B9BC2]! hover:text-[#34B34A]! border-[#9B9BC2]! hover:border-[#34B34A]! border transition-all duration-300',
 	};
 };

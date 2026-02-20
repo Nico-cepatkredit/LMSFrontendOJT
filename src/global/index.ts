@@ -25,15 +25,4 @@ export interface ISectionVisibility {
 
 export type SectionKey = keyof ISectionVisibility;
 
-export interface ILoanTabNav {
-	visible: ISectionVisibility;
-	onNavigate: (key: SectionKey) => void;
-	onToggle: (key: SectionKey, checked: boolean) => void;
-}
-
-export interface ILoanNavSection {
-	key: SectionKey;
-	label: string;
-}
-
 export type SectionRefs = Record<keyof ISectionVisibility, React.RefObject<HTMLDivElement | null>>;
