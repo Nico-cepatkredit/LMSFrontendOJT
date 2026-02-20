@@ -1,8 +1,8 @@
 import { Flex, Checkbox, Button, Tooltip, ConfigProvider } from 'antd';
 import { useEffect, useRef, useState } from 'react';
 import { LeftOutlined, RightOutlined } from '@ant-design/icons';
-import { LOAN_TAB_SECTIONS } from '../constants/LoanTabNavConst';
-import { useLoanTab } from '../context/LoanTabContext.tsx';
+import { LOAN_TAB_SECTIONS } from '../constants/LoanTabNavConst.ts';
+import { useLoanTab } from '../../../global/context/LoanTabContext.tsx';
 
 function LoanTabNav() {
 	const scrollRef = useRef<HTMLDivElement>(null);

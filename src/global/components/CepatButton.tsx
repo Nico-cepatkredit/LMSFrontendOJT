@@ -1,17 +1,33 @@
-import { Button, ConfigProvider, type ButtonProps } from 'antd';
+import { Button, ConfigProvider, Tooltip, type ButtonProps } from 'antd';
 
-function CepatButton(props: ButtonProps) {
+interface CepatButtonProps extends ButtonProps {
+	tooltip?: string;
+	buttonText?: string;
+}
+
+function CepatButton({ tooltip, buttonText, ...props }: CepatButtonProps) {
+	const buttonNode = <Button {...props}>{buttonText}</Button>;
+
 	return (
 		<ConfigProvider
 			theme={{
 				components: {
 					Button: {
-						colorText: '#FFFFFF',
+						colorText: '#585899',
+					},
+					Tooltip: {
+						colorBgSpotlight: '#585899',
 					},
 				},
 			}}
 		>
-			<Button {...props} />
+			{tooltip ? (
+				<Tooltip title={tooltip} placement="topLeft">
+					<>{buttonNode}</>
+				</Tooltip>
+			) : (
+				buttonNode
+			)}
 		</ConfigProvider>
 	);
 }

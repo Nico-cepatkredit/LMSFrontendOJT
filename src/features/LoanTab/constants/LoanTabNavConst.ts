@@ -1,19 +1,4 @@
-import type { ILoanNavSection, ISectionVisibility } from '..';
-
-export const initialSectionVisibility: ISectionVisibility = {
-	loan: true,
-	ofw: true,
-	employment: true,
-	credit: true,
-	assets: true,
-	character: true,
-	beneficiary: true,
-	approvalAmount: true,
-	loanAmount: true,
-	loanCharges: true,
-	lcCommission: true,
-	loanAmortization: true,
-};
+import type { ILoanNavSection } from '../';
 
 export const LOAN_TAB_SECTIONS: ILoanNavSection[] = [
 	{ key: 'loan', label: 'Loan Details' },
